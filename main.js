@@ -50,6 +50,8 @@ async function run() {
 
 `;
 
+    const year = new Date().getFullYear();
+    
     function dealBlog(blog) {
       if (blog) {
         return `[${blog}](https://${blog})`;
@@ -84,7 +86,7 @@ async function run() {
 
 [MIT](https://github.com/${owner}/${owner}/blob/main/LICENSE) <!-- Updated link to your GitHub profile -->
 
-Copyright (c) 2021-present [${owner}](https://github.com/${owner})
+Copyright (c) ${year}-present [${owner}](https://github.com/${owner})
 
 `;
     writeFileSync("./README.md", before + middle + end);
